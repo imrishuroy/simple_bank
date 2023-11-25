@@ -1,0 +1,31 @@
+Project Git Ref- 
+https://github.com/techschool/simplebank
+
+migrate 
+https://github.com/golang-migrate/migrate
+
+migrate-cli
+https://github.com/golang-migrate/migrate/tree/master/cmd/migrate
+
+gorm -ORM
+https://gorm.io/index.html
+
+sqlX
+https://github.com/jmoiron/sqlx
+
+sqlc
+https://github.com/sqlc-dev/sqlc
+
+lib/pq ( Go Postgres driver for database/sql )
+https://github.com/lib/pq
+
+testify ( About
+A toolkit with common assertions and mocks that plays nicely with the standard library )
+https://github.com/stretchr/testify
+
+learn about database transaction and ACID properties
+
+	
+https://github.com/golang/mock
+
+PASETO - A jwt alternative ( https://developer.okta.com/blog/2019/10/17/a-thorough-introduction-to-paseto )
