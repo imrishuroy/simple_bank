@@ -12,10 +12,18 @@ jobs:
 
     steps:
 
+    # - name: Configure AWS credentials
+    #   uses: aws-actions/configure-aws-credentials@v4 # More information on this action can be found below in the 'AWS Credentials' section
+    #   with:
+    #     role-to-assume: arn:aws:iam::963933939017:user/github_ci
+    #     aws-region: ap-south-1
+
+    
     - name: Configure AWS credentials
-      uses: aws-actions/configure-aws-credentials@v4 # More information on this action can be found below in the 'AWS Credentials' section
+      uses: aws-actions/configure-aws-credentials@v1
       with:
-        role-to-assume: arn:aws:iam::963933939017:user/github_ci
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: ap-south-1
 
     - name: Login to Amazon ECR
