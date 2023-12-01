@@ -29,3 +29,6 @@ learn about database transaction and ACID properties
 https://github.com/golang/mock
 
 PASETO - A jwt alternative ( https://developer.okta.com/blog/2019/10/17/a-thorough-introduction-to-paseto )
+
+
+https://kubernetes.io/docs/tutorials/stateless-application/expose-external-ip-address/
