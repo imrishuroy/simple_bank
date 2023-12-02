@@ -2,9 +2,9 @@ syntax = "proto3";
 
 package pb;
 
-import "google/protobuf/timestamp.proto";
-
 import "user.proto";
+
+import "google/protobuf/timestamp.proto";
 
 option go_package = "github.com/imrishuroy/simplebank/pb";
 
