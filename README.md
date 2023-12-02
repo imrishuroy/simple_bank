@@ -22,6 +22,7 @@ docker run --name simplebank --network bank-network -p 8080:8080 -e GIN_MODE=rel
 	Remove-Item pb/*.go -Force
 	protoc --proto_path=proto --go_out=pb --go_opt=paths=source_relative \
     --go-grpc_out=pb --go-grpc_opt=paths=source_relative \
+    --openapiv2_out=doc/swagger \
     proto/*.proto
 
 
