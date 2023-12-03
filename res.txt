@@ -32,3 +32,6 @@ PASETO - A jwt alternative ( https://developer.okta.com/blog/2019/10/17/a-thorou
 
 
 https://kubernetes.io/docs/tutorials/stateless-application/expose-external-ip-address/
+
+Developing Go Apps With Docker
+https://www.docker.com/blog/developing-go-apps-docker/
