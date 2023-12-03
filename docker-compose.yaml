@@ -15,5 +15,7 @@ services:
       - DB_SOURCE=postgresql://root:Prince2024@postgres:5432/simple_bank?sslmode=disable
     depends_on:
       - postgres
-    links:
-      - postgres
+    # entrypoint: ["/app/start.sh" ]  
+    # links:
+    #   - postgres
+    command: [ "/app/main" ]  
