@@ -8,7 +8,9 @@ To run gRPC client
 
    docker run --rm -v "$(pwd):/mount:ro" ghcr.io/ktr0731/evans:latest --path ./proto/files --proto service_simple_bank.proto --host localhost --port 9090 repl
 
+Test redis server
 
+    docker exec -it redis redis-cli ping
 
 docker run --name simplebank --network bank-network -p 8080:8080 -e GIN_MODE=release -e DB_SOURCE="postgresql://root:Prince2024@postgres12:5432/simple_bank?sslmode=disable" simplebank:latest
 
