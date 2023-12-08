@@ -11,6 +11,7 @@ import (
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"
 
+	"github.com/golang-migrate/migrate/v4"
 	_ "github.com/golang-migrate/migrate/v4/database/postgres" // required for db migration
 	_ "github.com/golang-migrate/migrate/v4/source/file"       // required for db migration
 
@@ -76,17 +77,16 @@ func main() {
 }
 
 func runDBMigration(migrationURL string, dbSource string) {
-	// migration, err := migrate.New(migrationURL, dbSource)
-	// if err != nil {
-	// 	log.Fatal().Msg("cannot create new migrate instance:", err)
-	// }
+	migration, err := migrate.New(migrationURL, dbSource)
+	if err != nil {
+		log.Fatal().Err(err).Msg("cannot create new migrate instance")
+	}
 
-	// if err = migration.Up(); err != nil && err != migrate.ErrNoChange {
-	// 	log.Fatal().Msg("failed to run migrate up:", err)
-	// }
+	if err = migration.Up(); err != nil && err != migrate.ErrNoChange {
+		log.Fatal().Err(err).Msg("failed to run migrate up")
+	}
 
-	log.Info().Msg("migration completed successfully")
-
+	log.Info().Msg("db migrated successfully")
 }
 
 // func runHTTPServer(config util.Config, store db.Store) {
