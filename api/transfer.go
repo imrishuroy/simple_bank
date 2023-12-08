@@ -1,7 +1,6 @@
 package api
 
 import (
-	"database/sql"
 	"errors"
 	"fmt"
 	"net/http"
@@ -62,7 +61,7 @@ func (server *Server) validAccount(ctx *gin.Context, accountId int64, currency s
 
 	account, err := server.store.GetAccount(ctx, accountId)
 	if err != nil {
-		if err == sql.ErrNoRows {
+		if errors.Is(err, db.ErrRecordNotFound) {
 			ctx.JSON(http.StatusNotFound, errorResponse(err))
 			return account, false
 		}
