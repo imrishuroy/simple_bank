@@ -35,3 +35,6 @@ https://kubernetes.io/docs/tutorials/stateless-application/expose-external-ip-ad
 
 Developing Go Apps With Docker
 https://www.docker.com/blog/developing-go-apps-docker/
+
+microservices architecture in Go
+https://medium.com/@rafaellevissa/microservices-architecture-in-golang-a-transformative-experience-596d1427a29a
